@@ -53,15 +53,15 @@ public class Main {
         System.out.println("Your age:");
         Byte age= (byte) scanner.nextInt();
         System.out.println("Your gender");
-        Person.Gender gender = null;
+        Gender gender = null;
         while (gender == null) {
 
             String genderInput = scanner.next();
 
             if (genderInput.equalsIgnoreCase("M")) {
-                gender = Person.Gender.Male;
+                gender = Gender.Male;
             } else if (genderInput.equalsIgnoreCase("F")) {
-                gender = Person.Gender.Female;
+                gender = Gender.Female;
             } else {
                 System.out.println("Invalid gender input. Please enter 'M' or 'F'.");
             }
