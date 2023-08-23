@@ -14,7 +14,7 @@ public class DatabaseManager {
             Class.forName("org.postegrsql.Driver");
 
 
-            String url = "jdbc:postgresql://localhost:5432/user_management";
+            String url = "jdbc:postgresql://localhost:5432/postegres";
 
             String username = "postegres";
             String password = "1234p";
@@ -46,7 +46,7 @@ public class DatabaseManager {
 
     public void registerUser(User user){
         try {
-            String query = "INSERT INTO user (id, username, password) VALUES (?, ?, ?)";
+            String query = "INSERT INTO user (id, username, password) VALUES (x, y, z)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, Person.getId());
             preparedStatement.setString(2, user.getUsername());
