@@ -34,7 +34,7 @@ public class Main {
             }
         }
 
-        System.out.println("Existing the program");
+        System.out.println("Existing..");
         databaseManager.closeConnection();
     }
 
@@ -63,7 +63,7 @@ public class Main {
             } else if (genderInput.equalsIgnoreCase("F")) {
                 gender = Gender.Female;
             } else {
-                System.out.println("Invalid gender input. Please enter 'M' or 'F'.");
+                System.out.println("Invalid gender. Please enter 'M' or 'F'.");
             }
         }
         return new Person(id, name, surname, fathername, age, gender);

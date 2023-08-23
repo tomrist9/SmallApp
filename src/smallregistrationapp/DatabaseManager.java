@@ -16,8 +16,8 @@ public class DatabaseManager {
 
             String url = "jdbc:postgresql://localhost:5432/user_management";
 
-            String username = "username";
-            String password = "password";
+            String username = "postegres";
+            String password = "1234p";
             connection = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException | SQLException exception) {
 
@@ -38,7 +38,7 @@ public class DatabaseManager {
             preparedStatement.setString(6, person.getGender().toString());
             preparedStatement.executeUpdate();
             preparedStatement.close();
-            System.out.println("Person saved successfully.");
+            System.out.println("successfully saved.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -53,7 +53,7 @@ public class DatabaseManager {
             preparedStatement.setString(3, user.getPassword());
             preparedStatement.executeUpdate();
             preparedStatement.close();
-            System.out.println("User registered successfully.");
+            System.out.println("registered successfully.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
